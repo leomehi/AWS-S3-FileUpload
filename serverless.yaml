@@ -1,0 +1,21 @@
+service: Fileupload
+
+provider:
+  name: aws
+  runtime: go1.x
+  region: ap-south-1
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "s3:CreateBucket"
+        - "s3:PutObject"
+      Resource: "*"
+
+functions:
+  yourFunctionName:
+    handler: main
+    events:
+      - http:
+          path: /
+          method: post
+          cors: true
