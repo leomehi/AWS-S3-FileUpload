@@ -1,8 +1,8 @@
 {
   "service": {
-    "service": "Fileupload",
+    "service": "Fileuploads3zstd",
     "serviceObject": {
-      "name": "Fileupload"
+      "name": "Fileuploads3zstd"
     },
     "provider": {
       "name": "aws",
@@ -96,7 +96,7 @@
           "YourFunctionNameLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/Fileupload-dev-yourFunctionName"
+              "LogGroupName": "/aws/lambda/Fileuploads3zstd-dev-yourFunctionName"
             }
           },
           "IamRoleLambdaExecution": {
@@ -124,7 +124,7 @@
                     "Fn::Join": [
                       "-",
                       [
-                        "Fileupload",
+                        "Fileuploads3zstd",
                         "dev",
                         "lambda"
                       ]
@@ -142,7 +142,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/Fileupload-dev*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/Fileuploads3zstd-dev*:*"
                           }
                         ]
                       },
@@ -153,7 +153,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/Fileupload-dev*:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/Fileuploads3zstd-dev*:*:*"
                           }
                         ]
                       },
@@ -169,7 +169,7 @@
                 "Fn::Join": [
                   "-",
                   [
-                    "Fileupload",
+                    "Fileuploads3zstd",
                     "dev",
                     {
                       "Ref": "AWS::Region"
@@ -187,11 +187,11 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/Fileupload/dev/1708896292786-2024-02-25T21:24:52.786Z/Fileupload.zip"
+                "S3Key": "serverless/Fileuploads3zstd/dev/1708981190099-2024-02-26T20:59:50.099Z/Fileuploads3zstd.zip"
               },
               "Handler": "main",
               "Runtime": "go1.x",
-              "FunctionName": "Fileupload-dev-yourFunctionName",
+              "FunctionName": "Fileuploads3zstd-dev-yourFunctionName",
               "MemorySize": 1024,
               "Timeout": 6,
               "Role": {
@@ -205,20 +205,20 @@
               "YourFunctionNameLogGroup"
             ]
           },
-          "YourFunctionNameLambdaVersionr5JAlZPjII3fj8V4F48qv1EG23RKBpnGh5Y0HBOM": {
+          "YourFunctionNameLambdaVersionSAnveeTPwB9VQeWlqoH24s3V0K2XBs9qi4HfRIqQJ0": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "YourFunctionNameLambdaFunction"
               },
-              "CodeSha256": "VtZVcAYqcUAj3Br5f6DYjxDLtNmiD+nwKlZnbJjQ4oo="
+              "CodeSha256": "+b6fVLX+8Hmwq+b8+BiH+LcHaE4wvDP/gEkMcKrQJgk="
             }
           },
           "ApiGatewayRestApi": {
             "Type": "AWS::ApiGateway::RestApi",
             "Properties": {
-              "Name": "dev-Fileupload",
+              "Name": "dev-Fileuploads3zstd",
               "EndpointConfiguration": {
                 "Types": [
                   "EDGE"
@@ -324,7 +324,7 @@
               "YourFunctionNameLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1708896291080": {
+          "ApiGatewayDeployment1708981188379": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -381,16 +381,16 @@
               "Ref": "ServerlessDeploymentBucket"
             },
             "Export": {
-              "Name": "sls-Fileupload-dev-ServerlessDeploymentBucketName"
+              "Name": "sls-Fileuploads3zstd-dev-ServerlessDeploymentBucketName"
             }
           },
           "YourFunctionNameLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "YourFunctionNameLambdaVersionr5JAlZPjII3fj8V4F48qv1EG23RKBpnGh5Y0HBOM"
+              "Ref": "YourFunctionNameLambdaVersionSAnveeTPwB9VQeWlqoH24s3V0K2XBs9qi4HfRIqQJ0"
             },
             "Export": {
-              "Name": "sls-Fileupload-dev-YourFunctionNameLambdaFunctionQualifiedArn"
+              "Name": "sls-Fileuploads3zstd-dev-YourFunctionNameLambdaFunctionQualifiedArn"
             }
           },
           "ServiceEndpoint": {
@@ -416,7 +416,7 @@
               ]
             },
             "Export": {
-              "Name": "sls-Fileupload-dev-ServiceEndpoint"
+              "Name": "sls-Fileuploads3zstd-dev-ServiceEndpoint"
             }
           }
         }
@@ -535,19 +535,19 @@
             }
           }
         ],
-        "name": "Fileupload-dev-yourFunctionName",
+        "name": "Fileuploads3zstd-dev-yourFunctionName",
         "package": {},
         "memory": 1024,
         "timeout": 6,
         "runtime": "go1.x",
         "vpc": {},
-        "versionLogicalId": "YourFunctionNameLambdaVersionr5JAlZPjII3fj8V4F48qv1EG23RKBpnGh5Y0HBOM"
+        "versionLogicalId": "YourFunctionNameLambdaVersionSAnveeTPwB9VQeWlqoH24s3V0K2XBs9qi4HfRIqQJ0"
       }
     },
     "configValidationMode": "warn",
     "serviceFilename": "serverless.yaml",
     "initialServerlessConfig": {
-      "service": "Fileupload",
+      "service": "Fileuploads3zstd",
       "provider": {
         "$ref": "$[\"service\"][\"provider\"]"
       },
@@ -557,10 +557,10 @@
     },
     "layers": {},
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "/Users/mehishahi/go/src/fileuploads3/.serverless/Fileupload.zip"
+    "artifact": "/Users/mehishahi/go/src/fileuploads3/.serverless/Fileuploads3zstd.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/Fileupload/dev/1708896292786-2024-02-25T21:24:52.786Z",
-    "artifact": "Fileupload.zip"
+    "artifactDirectoryName": "serverless/Fileuploads3zstd/dev/1708981190099-2024-02-26T20:59:50.099Z",
+    "artifact": "Fileuploads3zstd.zip"
   }
 }

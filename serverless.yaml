@@ -1,4 +1,4 @@
-service: Fileupload
+service: Fileuploads3zstd
 
 provider:
   name: aws
